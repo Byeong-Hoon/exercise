@@ -29,4 +29,18 @@ public class StringTest {
         assertThat(case1).isTrue();
         assertThat(case2).isFalse();
     }
+
+
+    @Test
+    @DisplayName("split 테스트하기")
+    public void create() throws Exception{
+        // given
+        String str = "haedoang@gmail.com";
+
+        // when
+        String[] split = str.split("@");
+
+        // then
+        assertThat(split).hasSize(2);
+    }
 }
